@@ -2,13 +2,14 @@ import { useState } from 'react'
 import GeneralInfo from './components/GeneralInfo';
 function App() {
   const [generalInfo,setGeneralInfo]=useState({
-    name:"",
+    firstName:"",
+    lastName:"",
     email:"",
     phone:""
   });
   return (
     <>
-    <GeneralInfo />
+    <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}/>
     </>
   )
 }
