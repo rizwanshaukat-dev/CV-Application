@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function Education({ education, setEducation }) {
     const [isEditing, setIsEditing] = useState(true);
     function handleSubmitButton() {
@@ -33,6 +34,7 @@ export default function Education({ education, setEducation }) {
     if (isEditing) {
         return (
             <div className="education-edit-component">
+                <h2 className="title">Education</h2>
                 <label htmlFor="school-name">Institution Name:</label>
                 <input type="text"
                     id="school-name"
