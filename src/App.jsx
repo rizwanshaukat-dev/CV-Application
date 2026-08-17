@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import GeneralInfo from './components/GeneralInfo';
+import Education from './components/Education';
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
     firstName: "",
@@ -10,11 +11,13 @@ function App() {
   const [education, setEducation] = useState({
     schoolName: "",
     titleOfStudy: "",
-    dateOfStudy: ""
+    startDate: "",
+    endDate: ""
   });
   return (
     <>
       <GeneralInfo generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
+      <Education education={education} setEducation={setEducation} />
     </>
   )
 }
