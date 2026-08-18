@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "../styles/general.css";
 
 export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
     const [isEditing, setIsEditing] = useState(true);
@@ -34,38 +35,46 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
     }
     if (isEditing) {
         return (
-            <div className="general-edit-component">
+            <div className="general-edit-component general-component">
                 <h2 className="title">General Information</h2>
+                <div className="form-field">
                 <label htmlFor="first-name">First Name:</label>
                 <input type="text"
                     id="first-name"
                     value={generalInfo.firstName}
                     onChange={handleFirstNameChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="last-name">Last Name:</label>
                 <input type="text"
                     id="last-name"
                     value={generalInfo.lastName}
                     onChange={handleLastNameChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="email">Email:</label>
                 <input type="email"
                     id="email"
                     value={generalInfo.email}
                     onChange={handleEmailChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="phone">Phone Number:</label>
                 <input type="tel"
                     id="phone"
                     value={generalInfo.phone}
                     onChange={handlePhoneChange}
                 />
+                </div>
                 <button className="submit-btn" onClick={handleSubmitButton}>Submit</button>
             </div>
         )
     }
     return (
-        <div className="general-display-component">
+        <div className="general-display-component general-component">
             <h2 className="title">General Information</h2>
             <h3>Full Name:</h3>
             <h4>{generalInfo.firstName} {generalInfo.lastName}</h4>
