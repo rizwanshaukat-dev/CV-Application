@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+background: #9796f0; 
+background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0); 
+background: linear-gradient(to right, #fbc7d4, #9796f0); 
+font-family: "Roboto",sans-serif;
+
+}
+.cv-form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1rem;
+}

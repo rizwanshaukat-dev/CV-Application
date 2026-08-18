@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/component.css";
 export default function Education({ education, setEducation }) {
     const [isEditing, setIsEditing] = useState(true);
     function handleSubmitButton() {
@@ -33,38 +34,46 @@ export default function Education({ education, setEducation }) {
     }
     if (isEditing) {
         return (
-            <div className="education-edit-component">
+            <div className="education-edit-component  component">
                 <h2 className="title">Education</h2>
+                <div className="form-field">
                 <label htmlFor="school-name">Institution Name:</label>
                 <input type="text"
                     id="school-name"
                     value={education.schoolName}
                     onChange={handleSchoolChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="program">Program/Degree:</label>
                 <input type="text"
                     id="program"
                     value={education.titleOfStudy}
                     onChange={handleProgramChange}
                 />
-                <label htmlFor="start-date">Start Date:</label>
+                </div>
+                <div className="form-field">
+                <label htmlFor="start-date-education">Start Date:</label>
                 <input type="month"
-                    id="start-date"
+                    id="start-date-education"
                     value={education.startDate}
                     onChange={handleStartDateChange}
                 />
-                <label htmlFor="end-date">End Date:</label>
+                </div>
+                <div className="form-field">
+                <label htmlFor="end-date-education">End Date:</label>
                 <input type="month"
-                    id="end-date"
+                    id="end-date-education"
                     value={education.endDate}
                     onChange={handleEndDateChange}
                 />
+                </div>
                 <button className="submit-btn" onClick={handleSubmitButton}>Submit</button>
             </div>
         )
     }
     return (
-        <div className="education-display-component">
+        <div className="education-display-component display-component">
             <h2 className="title">Education</h2>
             <h3>Institute Name:</h3>
             <h4>{education.schoolName}</h4>

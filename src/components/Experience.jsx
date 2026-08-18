@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/component.css";
 export default function Experience({experience,setExperience}){
     const [isEditing,setIsEditing]=useState(true);
     function handleSubmitButton() {
@@ -9,13 +9,13 @@ export default function Experience({experience,setExperience}){
         setIsEditing(true)
     }
     function handleCompanyChange(event) {
-        setEducation({
+        setExperience({
             ...experience,
             company: event.target.value
         })
     }
     function handlePositionChange(event) {
-        setEducation({
+        setExperience({
             ...experience,
             position: event.target.value
         })
@@ -27,68 +27,78 @@ export default function Experience({experience,setExperience}){
         })
     }
     function handleStartDateChange(event) {
-        setEducation({
+        setExperience({
             ...experience,
             startDate: event.target.value
         })
     }
     function handleEndDateChange(event) {
-        setEducation({
+        setExperience({
             ...experience,
             endDate: event.target.value
         })
     }
     if (isEditing) {
         return (
-            <div className="experience-edit-component">
+            <div className="experience-edit-component component">
                 <h2 className="title">Experience</h2>
+                <div className="form-field">
                 <label htmlFor="company">Company Name:</label>
                 <input type="text"
                     id="company"
                     value={experience.company}
                     onChange={handleCompanyChange}
                 />
-                <label htmlFor="position">Postion</label>
+                </div>
+                <div className="form-field">
+                <label htmlFor="position">Position</label>
                 <input type="text"
                     id="position"
-                    value={experience.positon}
+                    value={experience.position}
                     onChange={handlePositionChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="responsibility">Responsibilites:</label>
                 <textarea
-                    id="responsibilithy"
+                    id="responsibility"
                     value={experience.responsibility}
                     onChange={handleResponsiblitiesChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="start-date">Start Date:</label>
                 <input type="month"
                     id="start-date"
-                    value={experience.startDate}
+                    value={experience.startDate}            
                     onChange={handleStartDateChange}
                 />
+                </div>
+                <div className="form-field">
                 <label htmlFor="end-date">End Date:</label>
                 <input type="month"
                     id="end-date"
                     value={experience.endDate}
                     onChange={handleEndDateChange}
                 />
+                </div>
                 <button className="submit-btn" onClick={handleSubmitButton}>Submit</button>
             </div>
         )
     }
     return (
-        <div className="education-display-component">
+        <div className="experience-display-component display-component">
             <h2 className="title">Experience</h2>
             <h3>Company Name:</h3>
             <h4>{experience.company}</h4>
             <h3>Position:</h3>
             <h4>{experience.position}</h4>
             <h3>Responsibilities:</h3>
-            <h4>{experience.responsibility}</h4>
+            <p>{experience.responsibility}</p>
             <h3>Start Date:</h3>
-            <h4>{education.startDate}</h4>
+            <h4>{experience.startDate}</h4>
             <h3>End Date:</h3>
-            <h4>{education.endDate === "" ? "Present" : education.endDate}</h4>
+            <h4>{experience.endDate === "" ? "Present" : experience.endDate}</h4>
             <button className="edit-btn" onClick={handleEditButton}>Edit</button>
         </div>
     )

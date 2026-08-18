@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../styles/general.css";
+import "../styles/component.css";
 
 export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
     const [isEditing, setIsEditing] = useState(true);
@@ -35,7 +35,7 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
     }
     if (isEditing) {
         return (
-            <div className="general-edit-component general-component">
+            <div className="general-edit-component component">
                 <h2 className="title">General Information</h2>
                 <div className="form-field">
                 <label htmlFor="first-name">First Name:</label>
@@ -74,7 +74,7 @@ export default function GeneralInfo({ generalInfo, setGeneralInfo }) {
         )
     }
     return (
-        <div className="general-display-component general-component">
+        <div className="general-display-component display-component">
             <h2 className="title">General Information</h2>
             <h3>Full Name:</h3>
             <h4>{generalInfo.firstName} {generalInfo.lastName}</h4>
