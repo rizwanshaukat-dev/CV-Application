@@ -20,19 +20,39 @@ body {
     gap: 0.4rem;
     grid-template-columns: 1fr;
 }
+
 .cv-form-container {
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
     gap: 1rem;
 }
-.cv-preview{
+
+.cv-preview {
     width: 100%;
     padding: 1rem;
+}
+.print-btn{
+    margin-bottom: 6px;
 }
 @media (min-width:1024px) {
     .app-content {
         grid-template-columns: 1fr 1fr;
 
     }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    @page {
+        margin: 0;
+    }
+
 }

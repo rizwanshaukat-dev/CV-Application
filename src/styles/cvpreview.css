@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.cv-container{
+
+.cv-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,59 +14,75 @@
     padding: 1rem 1.2rem;
     gap: 0.8rem;
 }
-.general-info-container{
+
+.general-info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.heading{
+
+.heading {
     display: flex;
     flex-direction: column;
 }
-.job-title{
+
+.job-title {
     text-align: center;
 }
-hr{
-    border: none;
-    height: 2px;
-    background-color: black;
+
+hr {
+    border: 0;
+    border-top: 3px solid black;
+    height: 0;
     width: 100%;
     margin: 0.7rem 0;
+    background: none;
 }
-.general-content{
+
+.general-content {
     display: flex;
     gap: 0.4rem;
     font-size: 1rem;
     font-weight: 500;
 }
-.degree-school{
+
+.degree-school {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
-.program-title, .role-title{
+
+.program-title,
+.role-title {
     font-size: 1.3rem;
 }
-.institute-title , .company-title{
+
+.institute-title,
+.company-title {
     color: rgb(94, 93, 93);
     font-size: 1.2rem;
 }
-.responsibility-title{
+
+.responsibility-title {
     font-size: 1.2rem;
 }
-.experience-header{
+
+.experience-header {
     display: flex;
     justify-content: space-between;
 }
-.date{
+
+.date {
     font-size: 1.1rem;
     font-weight: 500;
 }
-.experience-content{
+
+.experience-content {
     padding: 0 1rem;
 }
-.experience-description{
+
+.experience-description {
     padding-left: 2rem;
     font-size: 1.1rem;
 }

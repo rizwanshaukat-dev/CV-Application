@@ -8,7 +8,7 @@ function App() {
   const [generalInfo, setGeneralInfo] = useState({
     firstName: "",
     lastName: "",
-    role:"",
+    role: "",
     email: "",
     phone: ""
   });
@@ -27,7 +27,6 @@ function App() {
   }]);
   function printButtonHandle() {
     window.print();
-
   }
   function addEducationHandle() {
     setEducation([
@@ -41,11 +40,11 @@ function App() {
   }
   function updateEducation(index, updatedEducation) {
     setEducation(
-        education.map((item, i) =>
-            i === index ? updatedEducation : item
-        )
+      education.map((item, i) =>
+        i === index ? updatedEducation : item
+      )
     );
-}
+  }
   function addExperienceHandle() {
     setExperience([
       ...experience,
@@ -58,13 +57,13 @@ function App() {
       }
     ])
   }
-function updateExperience(index, updatedExperience) {
+  function updateExperience(index, updatedExperience) {
     setExperience(
-        experience.map((item, i) =>
-            i === index ? updatedExperience : item
-        )
+      experience.map((item, i) =>
+        i === index ? updatedExperience : item
+      )
     );
-}
+  }
   return (
     <div className="app-content">
       <div className="cv-form-container no-print">
