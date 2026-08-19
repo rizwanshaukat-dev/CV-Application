@@ -9,7 +9,7 @@ h2 {
 }
 
 .component {
-    width: min(100% - 2rem, 900px);
+    width: 100%;
     margin-inline: auto;
     padding: 2rem;
     border-radius: 8px;
