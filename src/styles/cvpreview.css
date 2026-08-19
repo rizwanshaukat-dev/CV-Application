@@ -46,7 +46,23 @@ hr {
     font-size: 1rem;
     font-weight: 500;
 }
-
+.phone-wrapper,
+.email-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.phone-wrapper img,
+.email-wrapper img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.email-wrapper img{
+    width: 22px;
+    height: 22px;
+}
 .degree-school {
     display: flex;
     flex-direction: column;

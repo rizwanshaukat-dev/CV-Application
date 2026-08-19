@@ -1,4 +1,6 @@
 import "../styles/cvpreview.css";
+import phoneIcon from "../assets/phone.png";
+import mailIcon from "../assets/mail.png";
 export default function CVPreview({ generalInfo, education, experience }) {
     return (
         <div className="cv-container">
@@ -9,8 +11,14 @@ export default function CVPreview({ generalInfo, education, experience }) {
                 </div>
                 <hr />
                 <div className="general-content">
+                    <div className="phone-wrapper">
+                    <img src={phoneIcon} alt="phone-icon" />
                     <p className="phone-title">{generalInfo.phone} | </p>
+                    </div>
+                    <div className="email-wrapper">
+                    <img src={mailIcon} alt="mail-icon" />
                     <p className="email-title">{generalInfo.email}</p>
+                    </div>
                 </div>
             </div>
             <h2 className="experience-title">Experience</h2>
