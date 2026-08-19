@@ -63,6 +63,7 @@ export default function Experience({ experience, setExperience, updateExperience
                     <textarea
                         id="responsibility"
                         value={experience.responsibility}
+                        placeholder="End each sentence with a period (.) and a space to automatically create a bulleted list."
                         onChange={handleResponsiblitiesChange}
                     />
                 </div>

@@ -12,12 +12,12 @@ export default function CVPreview({ generalInfo, education, experience }) {
                 <hr />
                 <div className="general-content">
                     <div className="phone-wrapper">
-                    <img src={phoneIcon} alt="phone-icon" />
-                    <p className="phone-title">{generalInfo.phone} | </p>
+                        <img src={phoneIcon} alt="phone-icon" />
+                        <p className="phone-title">{generalInfo.phone} | </p>
                     </div>
                     <div className="email-wrapper">
-                    <img src={mailIcon} alt="mail-icon" />
-                    <p className="email-title">{generalInfo.email}</p>
+                        <img src={mailIcon} alt="mail-icon" />
+                        <p className="email-title">{generalInfo.email}</p>
                     </div>
                 </div>
             </div>

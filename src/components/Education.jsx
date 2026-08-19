@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/component.css";
-export default function Education({ education,setEducation,updateEducation,index }) {
+export default function Education({ education, setEducation, updateEducation, index }) {
     const [isEditing, setIsEditing] = useState(true);
     function handleSubmitButton() {
         setIsEditing(false)
@@ -9,27 +9,27 @@ export default function Education({ education,setEducation,updateEducation,index
         setIsEditing(true)
     }
     function handleSchoolChange(event) {
-        updateEducation(index,{
+        updateEducation(index, {
             ...education,
-            schoolName:event.target.value
+            schoolName: event.target.value
         });
     }
     function handleProgramChange(event) {
-         updateEducation(index,{
+        updateEducation(index, {
             ...education,
-            titleOfStudy:event.target.value
+            titleOfStudy: event.target.value
         });
     }
     function handleStartDateChange(event) {
-         updateEducation(index,{
+        updateEducation(index, {
             ...education,
-            startDate:event.target.value
+            startDate: event.target.value
         });
     }
     function handleEndDateChange(event) {
-        updateEducation(index,{
+        updateEducation(index, {
             ...education,
-            endDate:event.target.value
+            endDate: event.target.value
         });
     }
     if (isEditing) {

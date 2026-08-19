@@ -32,9 +32,11 @@ body {
     width: 100%;
     padding: 1rem;
 }
-.print-btn{
+
+.print-btn {
     margin-bottom: 6px;
 }
+
 @media (min-width:1024px) {
     .app-content {
         grid-template-columns: 1fr 1fr;
